@@ -1,25 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default function App() {
+  {
+    const [showModal, setShowModal] = React.useState(false);
+    const [usePortal, setUsePortal] = React.useState(true);
 
-export default App;
+    return (
+      <div className="outer-container">
+        <button onClick={() => setShowModal(true)}>Show Modal</button>
+        <label>
+          <input
+            type="checkbox"
+            checked={usePortal}
+            onChange={(e) => setUsePortal(e.target.checked)}
+          />
+          Use Portal
+        </label>
+        {showModal && (usePortal ? (
+          <ModalPortalVersion onClose={() => setShowModal(false)}>
+            <h2>Modal Content</h2>
+            <p>This is a modal using React Portal.</p>
+          </ModalPortalVersion>
+        ) : (
+          <ReactInlineVersion onClose={() => setShowModal(false)}>
+            <h2>Modal Content</h2>
+            <p>This is a modal using inline rendering.</p>
+          </ReactInlineVersion>
+        ))}
+      </div>
+    );
+  }
