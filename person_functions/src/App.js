@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ModalPortalVersion from './ModalPortalVersion';
+
 
 export default function App() {
   {
@@ -17,17 +20,13 @@ export default function App() {
           />
           Use Portal
         </label>
-        {showModal && (usePortal ? (
-          <ModalPortalVersion onClose={() => setShowModal(false)}>
-            <h2>Modal Content</h2>
-            <p>This is a modal using React Portal.</p>
-          </ModalPortalVersion>
-        ) : (
-          <ReactInlineVersion onClose={() => setShowModal(false)}>
-            <h2>Modal Content</h2>
-            <p>This is a modal using inline rendering.</p>
-          </ReactInlineVersion>
-        ))}
-      </div>
+
+
+        <div className="inner-container">
+          <p>This box has <code>overflow: hidden</code> in it</p>
+
+        </div>
+        
     );
   }
+}
