@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Array Example</h1>
+    
+<body>
+    <script>
+        function evenodd()
+        {
+        var intArr = [340, 223, 671, 777, 556];
+        for (var i = 0; i < 5; i++)
+        {
+            if(intArr[i] % 2 == 0)
+                document.writeln("Number is even.");
+            else
+                document.writeln("Number is odd.");
+
+        }
+        intArr.sort();
+        document.writeln("Sorted array: ");
+        intArr.forEach((e, i) => {
+            document.writeln(e);
+            });
+        }
+        function multiplesOfFive()
+        {
+            var i = 10;
+            while(i <= 100)
+        {
+            document.writeln(i+=5);
+            
+        }
+        }
+    </script>
+    <Form method="Post">
+        <button onclick="multiplesOfFive()">Submit</button>
+    </Form>
+</body>
+</html>

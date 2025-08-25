@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript  Conditional Statements Demo</h1>
+    
+<body>
+    <script>
+        function displayPoints()
+        {
+            var bet = document.getElementById('bet');
+            var betval = bet.value;
+            var betStr = betval.toUpperCase();
+            document.write(betStr + "<br>");
+
+            if (betStr == "INDIA")
+                document.write("India's current point tally = " + 500 + "<br>");
+            else if(betStr == "BANGLADESH")
+                document.write("Bangladesh's current point tally = " + 400 + "<br>");
+            else
+            {
+                document.write("Bangladesh's current point tally = " + 350 + "<br>");
+                document.write("India's current point tally = " + 400 + "<br>");
+            }
+        }
+
+    </script>
+    <Form method="post">
+        <label for="bet">Your bet on tomorrow's match:</label><br>
+        <input type="text" id="bet" name="bet"><br>
+        <p><button onclick="displayPoints()">Submit</button></p>
+    </Form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript For Loop with continue statement</h1>
+    
+<body>
+    <script>
+        function NonVegAllowed()
+        {
+            for(var i=0; i<7; i++)
+            {
+                if(i==2)
+                    continue;
+                document.write("Day#:" + i + "I'm allowed to eat non-veg today!" + "<br>");
+            }
+        }
+        
+    </script>
+    <Form method="post">
+        <p><button onclick="NonVegAllowed()">Submit</button></p>
+    </Form>
+</body>
+</html>

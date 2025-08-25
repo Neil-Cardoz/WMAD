@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Variables and their types</h1>
+    
+<body>
+    <script>
+        function findWords()
+        {
+            var sentence = document.getElementById('ta1').value;
+            var word = document.getElementById('tx1').value;
+            var noOfWords = sentence.split(word);
+            var lenOfArr = noOfWords.length;
+            document.writeln("# of times the word occurs in the sentence:", lenOfArr - 1);
+            document.writeln("\n");
+            document.writeln("Char at index 2 of the word:", word.charAt(2));
+            document.writeln("\n");
+            var s1 = "one fish ";
+            var s2 = "two fish";
+            document.writeln("Concatenated string: ", s1.concat(s2));
+            document.writeln("\n");
+            document.writeln(sentence.indexOf(word));
+            document.writeln("\n");
+            document.writeln(sentence.slice(3,7));
+
+        }
+    </script>
+    <Form method="post">
+        <label for="ta1">Enter the sentence:</label>
+        <br>
+        <textarea id="ta1" name="ta1" rows="2" cols="50"></textarea>
+        <br>
+        <label for="tx1">Enter the word to find:</label><br>
+        <input type="text" id="tx1" name="tx1"><br>
+
+        <p><button onclick="findWords()">Submit</button></p>
+
+    </Form>
+</body>
+</html>

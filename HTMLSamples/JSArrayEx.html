@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Array Example</h1>
+    
+<body>
+    <script>
+        function printArray()
+        {
+            /*var day = document.getElementById('day');
+            var dayVal = day.value;*/
+            //var dayStr = dayVal.toUpperCase();
+           const daysOfTheWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
+
+        
+            daysOfTheWeek.forEach ((e, i) => 
+            { document.write("Day #" + i + ": " + e + "<br>");});
+
+            /*for (var i = 0; i < 7; i++)
+            {
+                if (dayVal == daysOfTheWeek[i])
+                    document.writeln("You entered: ", daysOfTheWeek[i]);
+            }*/
+
+            const a = [100, 400, 900, 1600, 2500];
+            a.forEach((e, i) => {
+            document.writeln(Math.sqrt(e));
+            });
+        }
+        
+    </script>
+    <Form method="post">
+        <!--<label for="bet">Enter a day of the week:</label><br>
+        <input type="text" id="day" name="day"><br>-->
+        <p><button onclick="printArray()">Submit</button></p>
+    </Form>
+</body>
+</html>

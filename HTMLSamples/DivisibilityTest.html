@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript For Loop</h1>
+    
+<body>
+    <script>
+        function DivBy5()
+        {
+            var num1 = document.getElementById('number1');
+            var num1val = Number(num1.value);
+            var num2 = document.getElementById('number2');
+            var num2val = Number(num2.value);
+            var num3 = document.getElementById('number3');
+            var num3val = Number(num3.value);
+            var num4 = document.getElementById('number4');
+            var num4val = Number(num4.value);
+            var num5 = document.getElementById('number5');
+            var num5val = Number(num5.value);
+           var numArr = new Int32Array();
+           numArr = [num1val, num2val, num3val, num4val, num5val]; 
+        //    numArr.fill(num1val, num2val, num3val, num4val, num5val);
+            
+            numArr.forEach(function myfunc(num){
+                if (num%5==0) document.write(num + ' divisible by 5'+'<br>'); 
+                else document.write(num+ " not divisible by 5" + "<br>")
+            })
+            
+        
+        }
+        
+    </script>
+    <Form method="post">
+        <label for="number1">Enter number 1:</label><br>
+        <input type="number" id="number1" name="number1"><br>
+        <label for="number2">Enter number 2:</label><br>
+        <input type="number" id="number2" name="number2"><br>
+        <label for="number3">Enter number 3:</label><br>
+        <input type="number" id="number3" name="number3"><br>
+        <label for="number4">Enter number 4:</label><br>
+        <input type="number" id="number4" name="number4"><br>
+        <label for="number5">Enter number 5:</label><br>
+        <input type="numbe" id="number5" name="number5"><br>
+        <p><button onclick="DivBy5()">Submit</button></p>
+    </Form>
+</body>
+</html>

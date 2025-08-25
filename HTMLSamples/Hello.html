@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      window.onload = function() {
+        // Get the value from localStorage
+        var fnamevalue = localStorage.getItem('myFnameValue');
+        
+        // Display the value on the page
+        var fnameout = document.getElementById('fname-output');
+        fnameout.innerText = fnamevalue;
+
+        var lnamevalue = localStorage.getItem('myLnameValue');
+        
+        // Display the value on the page
+        var lnameout = document.getElementById('lname-output');
+        lnameout.innerText = lnamevalue;
+
+        
+        var genderValue = localStorage.getItem('genderValue');
+        var genderOut = document.getElementById('selected-gender');
+        genderOut.innerText = genderValue;
+
+        var sub1Value = localStorage.getItem('sub1Value');
+        var sub1Out = document.getElementById('sel-subject1');
+        sub1Out.innerText = sub1Value;
+        
+        var sub2Value = localStorage.getItem('sub2Value');
+        var sub2Out = document.getElementById('sel-subject2');
+        sub2Out.innerText = sub2Value;
+
+        var sub3Value = localStorage.getItem('sub3Value');
+        var sub3Out = document.getElementById('sel-subject3');
+        sub3Out.innerText = sub3Value;
+
+        var sub4Value = localStorage.getItem('sub4Value');
+        var sub4Out = document.getElementById('sel-subject4');
+        sub4Out.innerText = sub4Value;
+
+        var sub5Value = localStorage.getItem('sub5Value');
+        var sub5Out = document.getElementById('sel-subject5');
+        sub5Out.innerText = sub5Value;
+        
+        //Get the selected College name from localStorage
+        var colValue = localStorage.getItem('collegeValue');
+        var colOut = document.getElementById('sel-college');
+        colOut.innerText = colValue;
+        
+      };
+    </script>
+  </head>
+  <body>
+    <h1>HelloPage</h1>
+    <p>Hello
+    <p id="fname-output"></p>
+    <p id="lname-output"></p>
+    </p>
+    <h2>You have selected the gender as:</h2>
+    <p id="selected-gender"></p>
+    <h2>You teach the following courses:</h2>
+    <p id="sel-subject1"></p><br>
+    <p id="sel-subject2"></p><br>
+    <p id="sel-subject3"></p><br>
+    <p id="sel-subject4"></p><br>
+    <p id="sel-subject5"></p><br>
+    <h2>Your selected college is: </h2>
+    <p id = 'sel-college'></p><br>
+    <a href="./FormEx.html">
+      <input type="submit" value="OK">
+    </a>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<script>
+    window.onload = function() {
+      // Get the value from localStorage
+      var fnamevalue = localStorage.getItem('myFnameValue');
+      
+      // Display the value on the page
+      var fnameout = document.getElementById('fname-output');
+      fnameout.innerText = fnamevalue;
+
+      var lnamevalue = localStorage.getItem('myLnameValue');
+      
+      // Display the value on the page
+      var lnameout = document.getElementById('lname-output');
+      lnameout.innerText = lnamevalue;
+
+      var ev1value = localStorage.getItem('ev1value');
+      var ev1out = document.getElementById('ev1-out');
+      ev1out.innerText = ev1value;
+
+      var ev2value = localStorage.getItem('ev2value');
+      var ev2out = document.getElementById('ev2-out');
+      ev2out.innerText = ev2value;
+
+      var ev3value = localStorage.getItem('ev3value');
+      var ev3out = document.getElementById('ev3-out');
+      ev3out.innerText = ev3value;
+    }
+
+</script>
+<body>
+  <h1>Registration Confirmation Page</h1>
+  <p>Hello there,</p>
+  <p id="fname-output"></p>
+  <p id="lname-output"></p>
+  <p>you have chosen the following events:</p>
+  <p id="ev1-out"></p>
+  <p id="ev2-out"></p>
+  <p id="ev3-out"></p>
+  <a href="./RegistrationForm.html">
+    <input type="submit" value="OK">
+  </a>
+</body>
+</html>

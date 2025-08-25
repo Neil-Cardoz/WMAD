@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Math Operations</h1>
+    
+<body>
+    <script>
+        
+        function getUserInput()
+        {
+            var number1 = document.getElementById('number1');
+            var num1Val = number1.value;
+            var convNum = Number(num1Val);
+            evenOrOdd(convNum);
+            primeOrNot(convNum);
+        }
+        function evenOrOdd(convNum)
+        {
+            
+            if (convNum % 2 === 0)
+                document.write("Number is even." + "<br>");
+            else
+                document.write("Number is odd." + "<br>");
+        }
+        function primeOrNot(convNum)
+        {
+            /*var number1 = document.getElementById('number1');
+            var num1Val = number1.value;
+            var convNum = Number(num1Val);*/
+            if (convNum <= 1) {
+                document.write("Number is less than or equal to 1." + "<br>");
+            }
+            for (let i = 2; i <= Math.sqrt(convNum); i++) {
+                if (convNum % i === 0) {
+                    document.write("Number is not prime." + "<br>");
+                    break;              
+                }
+                else
+                {
+                    document.write("Number is prime."+"<br>");
+                    break;
+                }
+            }
+                            
+        }
+
+
+    </script>
+    <form method = "post">
+        <label for="number1">Enter a Number:</label><br>
+        <input type="number" id="number1" name="number1"><br>
+        <p><button onclick="getUserInput()">EvenOrOdd</button></p>
+        <p><button onclick="getUserInput()">PrimeOrNot</button></p>
+    </form>
+</body>
+</html>

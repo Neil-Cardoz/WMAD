@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Variables and their types</h1>
+    
+<body>
+    <script>
+        var i=10, j="test", k=33.3;
+
+
+        document.writeln("Integer variable:", i);
+        document.writeln("String variable:", j);
+        document.writeln("Float variable:", k);
+        function addNumbers()
+        {
+          var number1 = document.getElementById('number1');
+          var num1Val = number1.value;
+          var number2 = document.getElementById('number2');
+          var num2Val = number2.value;
+          document.writeln("Addition of the given numbers is: ", parseInt(num1Val)+parseInt(num2Val));
+        }
+    </script>
+     
+        <Form method="post">
+            <label for="number1">First Number:</label><br>
+            <input type="number" id="number1" name="number1"><br>
+            <label for="number2">Second Number:</label><br>
+            <input type="number" id="number2" name="number2"><br>
+            <p><button onclick="addNumbers()">Submit</button></p>
+        
+
+        </Form>
+
+    
+</body>
+</html>

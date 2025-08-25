@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Switch Statement</h1>
+    
+<body>
+    <script>
+        function displayWinner()
+        {
+            var bet = document.getElementById('bet');
+            var betval = bet.value;
+            var betStr = betval.toUpperCase();
+            document.write(betStr + "<br>");
+            switch(betStr)
+            {
+                case "INDIA": 
+                    document.write("The reigning winner of world cup!" + "<br>");
+                    break;
+                case "PAKISTAN":
+                    document.write("A surprise win!" + "<br>");
+                    break;
+                case "AUSTRALIA":
+                    document.write("Longing for it since ages!" + "<br>");
+                    break;
+                default:
+                    document.write("This country is not part of World cup!" + "<br>");
+                    break;
+
+            }
+        }
+    </script>
+    <Form method="post">
+        <label for="bet">Your bet on the winner of the world cup:</label><br>
+        <input type="text" id="bet" name="bet"><br>
+        <p><button onclick="displayWinner()">Submit</button></p>
+    </Form>
+</body>
+</html>

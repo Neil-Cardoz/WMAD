@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Math Operations</h1>
+    
+<body>
+    <script>
+        function dateOperations()
+        {
+            var dt = document.getElementById('dob');
+            var dtval = dt.value;
+            document.write(dtval);
+            document.write("<br>");
+            var dObj = new Date(dtval);
+            document.write("Date part:", dObj.getDate());
+            document.write("<br>");
+            document.write("Day of the week:", dObj.getDay());
+            document.write("<br>");
+            document.write("Month part:", dObj.getMonth());
+            document.write("<br>");
+
+            document.write("Year part:", dObj.getFullYear());
+            document.write("<br>");
+
+            document.write("Let's create different date objects!"+"<br>");
+            document.write("Date with string: "+ "<br>");
+            document.write(new Date("September 11, 2001 9:11:11")+"<br>");
+
+
+            var dt1 = new Date(1980, 10, 23);
+            var dt2 = new Date(2010, 5, 30);
+
+            document.write("Difference between 2 years: ", dt2.getFullYear() - dt1.getFullYear() );
+            document.write("<br>");
+            document.write("Difference between months: ", dt2.getMonth() - dt1.getMonth());
+            document.write("<br>");
+            document.write("Difference between 2 dates: ", dt2.getDate() - dt1.getDate());
+            document.write("<br>");
+            var aDate = new Date();
+            document.write("Setting individual components of Date object: " + "<br>");
+            
+            aDate.setDate(25);
+            aDate.setMonth(11);
+            aDate.setFullYear(2020);
+            aDate.setHours(12, 0, 0);
+            document.write("The date is: " + aDate + "<br>");
+
+            var sysDate = new Date();
+            document.write("Today's date is: " + sysDate + "<br>");
+        }
+    </script>
+
+<Form method="post">
+    <label for="dob">Enter Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob"><br>
+    <p><button onclick="dateOperations()">Submit</button></p>
+</Form>
+</body>
+</html>

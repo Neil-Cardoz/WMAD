@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <title>Student Information and Grade Calculation</title>  
+<body>
+
+    <!--<p>This is a paragraph <span style="color: blue;">This is the span I wanted to format differently<span><div style = "color: blueviolet;">This is the div I wanted to format differently</div></p>-->
+
+    <script>
+        function CalculateAgeAndGrades()
+        {
+            var dob = document.getElementById('dob');
+            var dobval = dob.value;
+            var dobdt = new Date(dobval);
+            var birthyear = dobdt.getFullYear();
+            var curdate = new Date();
+            var curyear = curdate.getFullYear();
+
+            var sub1 = document.getElementById('sub1');
+            var sub1marks = Number(sub1.value);
+            //document.write("Subject 1 marks:", sub1marks );
+            var sub2 = document.getElementById('sub2');
+            var sub2marks = Number(sub2.value);
+            var sub3 = document.getElementById('sub3');
+            var sub3marks = Number(sub3.value);
+            var sub4 = document.getElementById('sub4');
+            var sub4marks = Number(sub4.value);
+            var sub5 = document.getElementById('sub5');
+            var sub5marks = Number(sub5.value);
+
+            var percentage = (sub1marks+sub2marks+sub3marks+sub4marks+sub5marks)/5;
+            
+            var grade=" ";
+            if(percentage >= 95) grade="O";
+            else if(percentage >=90) grade = "A+"; 
+            else if (percentage >= 80) grade = "A"; 
+            else if (percentage >= 70) grade = "B"; 
+            else if (percentage >= 40) grade = "Pass"; 
+            else grade = "Fail"; 
+
+            document.write("Age=", curyear-birthyear);
+            document.write("<br>")
+            document.write("Overall grade=", grade);
+
+
+        }
+    </script>
+    <form method="post" action="ShowGrades.html">
+        <label for="studentid">Student ID:</label><br>
+        <input type="text" id="studentid" name="studentid"><br>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br>
+        <label for="class">Select Class:</label>
+        <select name="class" id="class">
+            <option value="FY BCA">FY BCA</option>
+            <option value="SY BCA">SY BCA</option>
+            <option value="TY BCA">TY BCA</option>
+            <option value="FY MCA">FY MCA</option>
+            <option value="SY MCA">SY MCA</option>
+        </select><br>
+        <label for="division">Division:</label><br>
+        <select name="division" id="division">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select><br>
+        <div>
+            <h1>Subjectwise Marks</h1>
+            <label for="sub1">Subject1:</label>
+            <input type="number" id="sub1" name="sub1"><br>
+            <label for="sub2">Subject2:</label>
+            <input type="number" id="sub2" name="sub2"><br>
+            <label for="sub3">Subject3:</label>
+            <input type="number" id="sub3" name="sub3"><br>
+            <label for="sub4">Subject4:</label>
+            <input type="number" id="sub4" name="sub4"><br>
+            <label for="sub5">Subject5:</label>
+            <input type="number" id="sub5" name="sub5"><br>
+        </div>
+        <p><button onclick="CalculateAgeAndGrades()">Submit</button></p>
+    </form>
+    </form>
+</body>
+</html>

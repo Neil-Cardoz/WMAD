@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Switch Statement</h1>
+    
+<body>
+    <script>
+        function displayMessage()
+        {
+            var day = document.getElementById('day');
+            var dayVal = day.value;
+            var dayStr = dayVal.toUpperCase();
+            document.write(dayStr + "<br>");
+            switch(dayStr)
+            {
+                case "SUN": 
+                case "SUNDAY":
+                    document.write("It is a holiday!" + "<br>");
+                    break;
+                case "MON":
+                case "MONDAY":
+                    document.write("A surprise win!" + "<br>");
+                    break;
+                case "AUSTRALIA":
+                    document.write("Longing for it since ages!" + "<br>");
+                    break;
+                default:
+                    document.write("Invalid day of the week." + "<br>");
+                    break;
+
+            }
+        }
+    </script>
+    <Form method="post">
+        <label for="bet">Enter a day of the week:</label><br>
+        <input type="text" id="day" name="day"><br>
+        <p><button onclick="displayMessage()">Submit</button></p>
+    </Form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Comparison Operators</h1>
+    
+<body>
+    <script>
+        function compareAndLogical()
+        {
+          var number1 = document.getElementById('number1');
+          var num1Val = number1.value;
+          var number2 = document.getElementById('number2');
+          var num2Val = number2.value;
+          document.writeln("Result of simple comparison: ", Number(num1Val)==Number(num2Val));
+          document.write("<br>");
+          document.writeln("Result of comparison with type: ", Number(num1Val)===parseInt(num2Val));
+          document.write("<br>");
+          document.writeln("Result of not equal: ", Number(num1Val)!=Number(num2Val));
+          document.write("<br>");
+          document.writeln("Result of first > second: ", Number(num1Val)>Number(num2Val));
+          document.write("<br>");
+          document.writeln("Result of first && second: ", Number(num1Val)&&Number(num2Val));
+          document.write("<br>");
+          document.writeln("Result of first || second: ", Number(num1Val)||Number(num2Val));
+          document.write("<br>");
+          document.writeln("Result of ternery operator: ", Number(num1Val)>Number(num2Val)?num1Val : num2Val);
+          document.write("<br>");
+        }
+    </script>
+    <Form method="post">
+        <label for="number1">First Number:</label><br>
+        <input type="number" id="number1" name="number1"><br>
+        <label for="number2">Second Number:</label><br>
+        <input type="number" id="number2" name="number2"><br>
+        <p><button onclick="compareAndLogical()">Submit</button></p>
+    </Form>
+
+</body>
+</html>

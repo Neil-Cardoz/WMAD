@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <title>Form Examples</title>
+    <head>
+        College Fest Registration Form
+        <link rel="stylesheet" type="text/css" href="./mystyles.css">
+    </head>
+    <script>
+        function Register() {
+          localStorage.clear();
+          // Get the value entered by the user
+          var fname = document.getElementById('fname');
+          var fnamevalue = fname.value;
+          localStorage.setItem('myFnameValue', fnamevalue);
+
+          var lname = document.getElementById('lname');
+          var lnamevalue = lname.value;
+          localStorage.setItem('myLnameValue', lnamevalue);
+                 
+          var ev1 = document.getElementById('ev1');
+          if (ev1.checked)
+          {
+            var ev1value = ev1.value;
+            localStorage.setItem('ev1value', ev1value)
+          }
+          var ev2 = document.getElementById('ev2');
+          if (ev2.checked)
+          {
+            var ev2value = ev2.value;
+            localStorage.setItem('ev2value', ev2value)
+          }
+          var ev3 = document.getElementById('ev3');
+          if (ev3.checked)
+          {
+            var ev3value = ev3.value;
+            localStorage.setItem('ev3value', ev3value)
+          }      
+                  
+          //Store selected Course Name in localStorage
+          var course = document.getElementById('CourseName');
+          var coursevalue = course.value;
+          localStorage.setItem('coursevalue', coursevalue);
+          
+          //Store selected Year in localStorage
+          var year = document.getElementById('Year');
+          var yearvalue = year.value;
+          localStorage.setItem('yearvalue', yearvalue);
+        }
+      </script>
+    
+    <p>
+        <Form method="post" action="./RegistrationConfirmation.html">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <p>
+            <label for="CourseName">Course Name:</label>
+            <select name="CourseName" id="CourseName">
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="MCA">MCA</option>
+                <option value="MBA">MBA</option>
+            </select>
+            </p>
+            <p>
+            <label for="Year">Select Year:</label><br>
+            <select name="Year" id="Year">
+              <option value="FYBCA">FYBCA</option>
+              <option value="SYBCA">SYBCA</option>
+              <option value="TYBCA">TYBCA</option>
+              <option value="MBA1">MBA First Year</option>
+              <option value="MBA2">MBA Second Year</option>
+            </select>
+            </p>
+            <p>
+            <label for="Events">Choose Events to compete:</label>
+            <fieldset>
+                <div id="Events">
+                    <input class = "myclass" type="checkbox" id="ev1" name="event1" value="Dance">Dance<br>
+                    <input class = "myclass" type="checkbox" id="ev2" name="event2" value="Drama">Drama<br>
+                    <input class = "myclass" type="checkbox" id="ev3" name="event3" value="Singing">Singing<br>
+                </div>
+            </fieldset><br>
+            </p>
+            <p><button onclick="Register()">Submit</button></p>
+        </Form>
+    </p>
+</html>

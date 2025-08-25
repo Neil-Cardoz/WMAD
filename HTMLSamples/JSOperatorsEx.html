@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript Math Operators</h1>
+    
+<body>
+    <script>
+        function performMathOperations()
+        {
+          var number1 = document.getElementById('number1');
+          var num1Val = number1.value;
+          var number2 = document.getElementById('number2');
+          var num2Val = number2.value;
+          document.writeln("Addition of the given numbers is: ", Number(num1Val)+Number(num2Val));
+          document.write("<br>");
+          document.writeln("Difference between the given numbers is: ", Number(num1Val)-Number(num2Val));
+          document.write("<br>");
+          document.writeln("Product of the given numbers is: ", Number(num1Val)*Number(num2Val));
+          document.write("<br>");
+          document.writeln("Division of the given numbers is: ", Number(num1Val)/Number(num2Val));
+          document.write("<br>");
+          var fNum = Number(num1Val);
+          document.writeln("The first number incremented: ", ++fNum);
+          document.write("<br>");
+          document.writeln("The first number decremented: ", --fNum);
+          document.write("<br>");
+
+          document.writeln("Max of the two numbers:", Math.max(Number(num1Val), Number(num2Val)));
+          document.write("<br>");
+          document.writeln("Min of the two numbers:", Math.min(Number(num1Val), Number(num2Val)));
+          document.write("<br>");
+          document.writeln("First number rounded:", Math.round(Number(num1Val)))
+          document.write("<br>");
+
+          //var enteredAge = document.getElementById('userAge');
+          //document.write(enteredAge.value);
+          //var ageVal = enteredAge.value;
+          //document.writeln(ageVal);
+          //var intAge = parseInt(ageVal);
+
+          /*var printAge = intAge > 18 ? intAge : (18 - intAge);
+          document.writeln(printAge);*/
+        }
+    </script>
+    <Form method="post">
+        <label for="number1">First Number:</label><br>
+        <input type="number" id="number1" name="number1"><br>
+
+        <label for="number2">Second Number:</label><br>
+        <input type="number" id="number2" name="number2"><br>
+
+        <!--<label for="age">Enter your age:</label><br>
+        <input type="number" id="userAge" name="uage"><br>-->
+
+        <p><button onclick="performMathOperations()">Submit</button></p>
+    </Form>
+
+</body>
+</html>

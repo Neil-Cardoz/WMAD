@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <h1>Javascript For Loop</h1>
+    
+<body>
+    <script>
+        function printFib()
+        {
+            var count = document.getElementById('ncount');
+            var countval = Number(count.value);
+            var n1 = 0, n2 = 1, n3, i;
+            
+            document.write(n1 + " " + n2 + " ");    
+            for (i = 2; i < countval; ++i) 
+            {
+                n3 = n1 + n2;
+                document.write(n3 + " ");
+                n1 = n2;
+                n2 = n3;
+            }
+
+            
+        }
+        function calcCubesAndSquares()
+        {
+            for (var i = 1; i <= 10; i++)
+            {
+                if(i%2 == 0)
+                    document.write("Cube of the number:", i*i*i);
+                else
+                    document.write("Square of the number:", i*i);
+            }
+        }
+    </script>
+    <Form method="post">
+        <label for="ncount">Enter the number of elements in Series:</label><br>
+        <input type="number" id="ncount" name="ncount"><br>
+        <p><button onclick="printFib()">Submit</button></p>
+    </Form>
+</body>
+</html>

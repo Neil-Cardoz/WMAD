@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<script>
+    window.onload = function() {
+      // Get the value from localStorage
+      var fnamevalue = localStorage.getItem('myFnameValue');
+      
+      // Display the value on the page
+      var fnameout = document.getElementById('fname-output');
+      fnameout.innerText = fnamevalue;
+
+      var lnamevalue = localStorage.getItem('myLnameValue');
+      
+      // Display the value on the page
+      var lnameout = document.getElementById('lname-output');
+      lnameout.innerText = lnamevalue;
+    }
+
+</script>
+<body>
+  <h1>HelloPage</h1>
+  <p>Hello there,</p>
+  <p id="fname-output"></p>
+  <p id="lname-output"></p>
+  
+</body>
+</html>

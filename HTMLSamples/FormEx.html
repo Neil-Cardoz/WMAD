@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <title>Form Examples</title>
+    <head>
+        Let's create a form
+    </head>
+    <script>
+        function submitValue() {
+          localStorage.clear();
+          // Get the value entered by the user
+          var fname = document.getElementById('fname');
+          var fnamevalue = fname.value;
+          var lname = document.getElementById('lname');
+          var lnamevalue = lname.value;
+          var genders = document.getElementsByName('gender');
+          for(i = 0; i < genders.length; i++)
+          {
+            if (genders[i].checked)
+            {
+               var genderValue = genders[i].value;
+            }
+          }
+          var subjects = document.getElementById('sub1');
+          
+          var sub1 = document.getElementById('sub1');
+          if (sub1.checked)
+          {
+            var sub1value = sub1.value;
+            localStorage.setItem('sub1Value', sub1value)
+          }
+          var sub2 = document.getElementById('sub2');
+          if (sub2.checked)
+          {
+            var sub2value = sub2.value;
+            localStorage.setItem('sub2Value', sub2value)
+          }
+          var sub3 = document.getElementById('sub3');
+          if (sub3.checked)
+          {
+            var sub3value = sub3.value;
+            localStorage.setItem('sub3Value', sub3value)
+          }
+          var sub4 = document.getElementById('sub4');
+          if (sub4.checked)
+          {
+            var sub4value = sub4.value;
+            localStorage.setItem('sub4Value', sub4value)
+          }
+          var sub5 = document.getElementById('sub5');
+          if (sub5.checked)
+          {
+            var sub5value = sub5.value;
+            localStorage.setItem('sub5Value', sub5value)
+          }
+          // Store the value in localStorage
+          localStorage.setItem('myFnameValue', fnamevalue);
+          localStorage.setItem('myLnameValue', lnamevalue);
+          localStorage.setItem('genderValue', genderValue);
+          
+          //Store selected college name in localStorage
+          var col = document.getElementById('colleges');
+          var colValue = col.value;
+          localStorage.setItem('collegeValue', colValue);
+          // Redirect to the second page
+          //window.location.href = 'Hello.html';
+        }
+      </script>
+    <p>
+        <Form method="post" action="./Hello.html">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="gender">Gender: </label>
+            <fieldset>
+                <div id="genders" length="10">
+                    <input type="radio" id="gender1" name="gender" value="Male">Male<br>
+                    <input type="radio" id="gender2" name="gender" value="Female">Female<br>
+                    <input type="radio" id="gender3" name="gender" value="Other">Other<br>
+                </div>
+            </fieldset>
+            <label for="subjects">Subjects taught:</label>
+            <fieldset>
+                <div id="subjects">
+                    <input type="checkbox" id="sub1" name="subject1" value="C#">C# Programming language<br>
+                    <input type="checkbox" id="sub2" name="subject2" value="Project Management">Project Management<br>
+                    <input type="checkbox" id="sub3" name="subject3" value="HTML, CSS, Javascript">HTML, CSS and Javascript<br>
+                    <input type="checkbox" id="sub4" name="subject4" value="Java">Java Programming<br>
+                    <input type="checkbox" id="sub5" name="subject5" value="Python">Python Programming<br>
+                </div>
+            </fieldset><br>
+            <label for="colleges">Select a College:</label><br>
+            <select name="colleges" id="colleges">
+              <option value="MIT">MIT WPU</option>
+              <option value="IMED">IMED</option>
+              <option value="VU">VU</option>
+            </select>
+            <p><button onclick="submitValue()">Submit</button></p>
+        </Form>
+    </p>
+</html>

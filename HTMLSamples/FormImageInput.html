@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <title>Form with Image Source</title>
+    <head>
+        Let's create a form with Image button
+    </head>
+    <script>
+        function submitName() {
+          localStorage.clear();
+          // Get the value entered by the user
+          var fname = document.getElementById('fname');
+          var fnamevalue = fname.value;
+          var lname = document.getElementById('lname');
+          var lnamevalue = lname.value;
+          localStorage.setItem('myFnameValue', fnamevalue);
+          localStorage.setItem('myLnameValue', lnamevalue);
+          // Redirect to the second page
+          //window.location.href = 'HelloThere.html';
+        }
+    </script>
+    <body>
+      <form action="./HelloThere.html">
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name: </label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="image" src="Hello.gif" alt="Submit" width="48" height="48" onclick="submitName()">
+      </form>
+    </body>
+</html>
